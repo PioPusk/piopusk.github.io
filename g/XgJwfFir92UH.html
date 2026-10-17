@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="referrer" content="no-referrer">
+<title>Piopusk</title>
+<style>
+:root{--bg:#f7f6f2;--card:#fff;--fg:#1d2127;--muted:#6b7280;--accent:#1f80ba;--rule:#e6e3dc}
+@media (prefers-color-scheme:dark){:root{--bg:#14171c;--card:#1b1f26;--fg:#e8e6e1;--muted:#9aa3ad;--accent:#4aa0dd;--rule:#2a3039}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 -apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+.wrap{max-width:760px;margin:0 auto;padding:28px max(16px,env(safe-area-inset-left)) 56px max(16px,env(safe-area-inset-right))}
+.brand{font-size:13px;letter-spacing:.06em;color:var(--muted);margin-bottom:14px}
+.brand b{color:var(--accent)}
+article{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:28px clamp(18px,4vw,40px)}
+h1{font-size:clamp(24px,4.6vw,32px);line-height:1.25;margin:0 0 18px;text-wrap:balance}
+h2{font-size:19px;line-height:1.35;margin:28px 0 10px;color:var(--accent);letter-spacing:.01em}
+p{margin:0 0 14px}ul{margin:0 0 16px;padding-left:1.25em}li{margin:4px 0}
+hr{border:0;border-top:1px solid var(--rule);margin:30px 0}
+a{color:var(--accent);word-break:break-word}
+.note{color:var(--muted);text-align:center;padding:40px 0}
+footer{color:var(--muted);font-size:13px;text-align:center;margin-top:22px}
+</style></head><body><div class="wrap">
+<div class="brand"><b>Piopusk</b> · гайд</div>
+<article id="a"><p class="note" id="n">Открываю гайд…</p></article>
+<footer>Материал подготовил Piopusk</footer></div>
+<script id="d" type="application/octet-stream">q8UNe4aFEF2qPyZ0ZEDfvxT4IZfIgwIbjd9kz-IB2OZkutgGiiGO2AL_VqRN-5hy0-Ygr9LbmimTy-TXJCPVNQKlX5AGNT4NlQLUbmh_UQNtbBtDEkveJexuHYwJ5onpBFoqaPXF4yv-CuUFnuDYHVQtCwQ_joI0jR95BmYdcHt2IrrjPknQpcuVq9D3JacoIscodSiGVGnV4YW395KAnxVOfdv8qaY_9qHd3kn_21-bH-idbBZxOXhL3UJ8ildAM_76VEIci43z4TQm5jA0qgz_s18cDrbkL6X9iUW15Sb-msWbxS9bDOS2Alh89tJbl24DK4PU6qKWZGo7lD0zTja0SLd527QtBS2wKbw-httXM-XrUg-KxbYZx0Vj8uDXyz2BeSs</script>
+<script>
+(async()=>{const n=document.getElementById('n');
+const u=s=>Uint8Array.from(atob(s.replace(/-/g,'+').replace(/_/g,'/')+'='.repeat((4-s.length%4)%4)),c=>c.charCodeAt(0));
+try{const k=location.hash.slice(1);if(!k)throw 0;
+const raw=u(document.getElementById('d').textContent.trim());
+const key=await crypto.subtle.importKey('raw',u(k),'AES-GCM',false,['decrypt']);
+const plain=await crypto.subtle.decrypt({name:'AES-GCM',iv:raw.slice(0,12)},key,raw.slice(12));
+const o=JSON.parse(new TextDecoder().decode(plain));document.title=o.t;
+const a=document.getElementById('a');a.innerHTML='<h1></h1>'+o.h;a.querySelector('h1').textContent=o.t;
+}catch(e){n.textContent='Ссылка неполная. Откройте её целиком из сообщения FunPay — вместе с частью после знака #.';}})();
+</script></body></html>
